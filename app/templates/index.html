@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block menu %}
+
+		  <li class="nav-item "><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+		  <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About us</a></li>
+		  <li class="nav-item"><a href="{% url 'services' %}" class="nav-link">Services</a></li>
+		  <li class="nav-item active"><a href="{% url 'causes' %}" class="nav-link">Causes</a></li>
+		  <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+		  <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+		 
+
+  {% endblock %}
+  
+{% block content %}   
+    <div class="hero-wrap" style="background-image: url({% static 'images/bg12.jpg' %});" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-12 text ftco-animate mt-5 text-center" data-scrollax=" properties: { translateY: '70%' }">
+          		<div class="play-video d-flex align-items-center justify-content-center"><a href="https://vimeo.com/98917597" class="popup-vimeo"><span class="icon"><i class="ion-ios-play "></i></span></a></div>
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> U  <br><br> Shippers <br> </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}

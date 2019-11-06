@@ -1,0 +1,83 @@
+<!-- Developer name: Jairon Landa (jaironlanda.com) -->
+
+{% extends 'base.html'%}
+{% load static %}
+{% block menu %}
+
+		  <li class="nav-item "><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+		  <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About us</a></li>
+		  <li class="nav-item"><a href="{% url 'services' %}" class="nav-link">Services</a></li>
+		  <li class="nav-item active"><a href="{% url 'causes' %}" class="nav-link">Causes</a></li>
+		  <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+		  <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+		 
+
+  {% endblock %}
+{% block content %}
+
+
+<center>
+        <div class="hero-wrap" style="background-image: url({% static 'images/bg12.jpg' %});" data-stellar-background-ratio="0.5">
+                   <div class="overlay"></div>
+                   <div class="container">
+                     <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+                       <div class="col-md-12 text ftco-animate mt-18 text-center" data-scrollax=" properties: { translateY: '70%' }">
+                               
+       
+<br>
+<br>
+<br>
+                <div class="container"  style=" align-self: center;margin-left: 35%;padding-top: 1%; width: 35%; background-color:white " >        
+                        <div class="col-md-12 col-md-offset-12 panel-style">
+
+
+                            
+            <div class="panel panel-default">
+                  <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <strong><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                Register
+                            </strong>
+                        </h4>
+                  
+
+                        <div class="form-group">
+                            <a class="btn btn-primary btn-block" href="#" role="button"> Facebook</a>
+                            <a class="btn btn-danger btn-block" href="#" role="button"> Google +</a>
+                        </div>
+                    
+                        <form action="{% url 'register-form' %}" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                    
+                                    <input type="text" name="username" id="username" placeholder="Name" class="form-control" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <input type="email" name="email" id="email" placeholder="Email" class="form-control" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <input type="password" name="password" id="password" placeholder="Password" class="form-control" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <input type="password" name="confirm_password" id="confirm_password"  placeholder="Confirm Password" class="form-control" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Submit</button>
+                                    <a href="{% url 'login-form' %}">Login</a> | <a href="{% url 'index' %}">Homepage</a>
+                                </div>
+                        </form>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+    <link rel="stylesheet" href="{% static '1jquery/jquery-3.3.1.min.js' %}">
+    <link rel="stylesheet" href="{% static '1bootstrap/js/bootstrap.js' %}">
+</body>
+</html>
+</center>
+
+{% endblock %}

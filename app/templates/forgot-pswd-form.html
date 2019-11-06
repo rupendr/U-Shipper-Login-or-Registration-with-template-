@@ -1,0 +1,86 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block menu %}
+
+		  <li class="nav-item "><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+		  <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About us</a></li>
+		  <li class="nav-item"><a href="{% url 'services' %}" class="nav-link">Services</a></li>
+		  <li class="nav-item active"><a href="{% url 'causes' %}" class="nav-link">Causes</a></li>
+		  <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+		  <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+		 
+
+  {% endblock %}
+{% block content %}
+
+  <center>
+    <div class="hero-wrap" style="background-image: url({% static 'images/bg12.jpg' %});" data-stellar-background-ratio="0.5">
+               <div class="overlay"></div>
+               <div class="container">
+                 <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+                   <div class="col-md-12 text ftco-animate mt-5 text-center" data-scrollax=" properties: { translateY: '70%' }">
+                           
+   
+  
+
+
+        <br>
+        
+        
+        <html>
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Login</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Load bootstrap 3 -->
+            <link rel="stylesheet" type="text/css" media="screen" href="{% static 'assets/bootstrap/css/bootstrap.css' %}" />
+            <!-- Custom style -->
+          </head>
+        <body>
+        
+            <br>
+        
+            <div class="container"  style=" align-self: center;margin-left: 35%;padding-top: 1%; width: 35%; background-color:white " >        
+                <div class="col-md-12 col-md-offset-12 panel-style">
+
+            <div class="panel panel-default">
+                  <div class="panel-heading">
+                        <h3 class="panel-title"><strong>
+                        <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                        Forgot Password
+                    </strong></h3>
+                  </div>
+                  <div class="panel-body">
+                        <form action="#" method="post">
+                            <div class="alert alert-info">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <strong>Info</strong><br> Enter your valid email before procced to password reset.
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" class="form-control"  required="required">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">
+                                <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                                    Submit</button>
+                                <a href="{% url 'login-form' %}">Login</a>  | <a href="{% url 'register-form' %}">Register</a> | <a href="{% url 'index' %}">Homepage</a>
+                            </div>
+                        </form>
+                        
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="{% static '1jquery/jquery-3.3.1.min.js' %}">
+    <link rel="stylesheet" href="{% static '1bootstrap/js/bootstrap.js' %}">
+</body>
+</html>
+</center>
+
+
+{% endblock %}
